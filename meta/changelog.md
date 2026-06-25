@@ -10,3 +10,8 @@
 - 落地 `build_wiki`、`apply_updates`、`verify_wiki` 维护循环。
 - 增加 Diátaxis 内容模型、四篇 Evergreen 核心判断和分层本地检索。
 - 初始化 Docs-as-Code Git 仓库与自动验证工作流。
+
+## 2026-06-26
+
+- 增加只读 MCP Server 与五个知识工具。
+- 增加 RAG 失败追溯、来源引用与过期检查 Demo。

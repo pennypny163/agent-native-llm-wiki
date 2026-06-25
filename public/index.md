@@ -2,6 +2,8 @@
 
 > 把 50 万字高质量大模型资料，从静态 Word 教材编译成可追溯、可验证、可持续演化的知识系统。
 
+[GitHub 仓库](https://github.com/pennypny163/agent-native-llm-wiki)
+
 ## 从哪里开始
 
 <div class="grid cards" markdown>
@@ -53,4 +55,3 @@
 - [LLM 工程师学习路径](learning-paths/llm-engineer.md)
 - [Agent 工程师学习路径](learning-paths/agent-engineer.md)
 - [关于这个项目](about.md)
-

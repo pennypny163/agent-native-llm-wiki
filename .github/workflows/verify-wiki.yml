@@ -16,8 +16,11 @@ jobs:
         run: python scripts/verify_wiki.py
       - name: Install documentation dependencies
         run: pip install -r requirements-docs.txt
+      - name: Install MCP dependencies
+        run: pip install -r requirements-mcp.txt
+      - name: Test MCP knowledge tools
+        run: python scripts/test_mcp_tools.py
       - name: Build public Wiki
         run: |
           python scripts/prepare_mkdocs.py
           mkdocs build --strict
-

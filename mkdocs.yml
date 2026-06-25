@@ -1,13 +1,13 @@
 site_name: Agent-Native LLM Wiki
 site_description: 从 50 万字技术资料编译而来的可追溯 LLM、RAG 与 Agent 知识系统
 site_author: Panningyi
+site_url: https://pennypny163.github.io/agent-native-llm-wiki/
 docs_dir: .cache/public-docs
 site_dir: site
 use_directory_urls: true
 
 repo_name: agent-native-llm-wiki
-# 发布到 GitHub 后替换为真实仓库地址：
-# repo_url: https://github.com/<username>/<repository>
+repo_url: https://github.com/pennypny163/agent-native-llm-wiki
 
 theme:
   name: material

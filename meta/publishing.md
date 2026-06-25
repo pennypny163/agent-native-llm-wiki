@@ -27,7 +27,7 @@ make docs-build
 ## 发布到 GitHub Pages
 
 1. 在 GitHub 创建空仓库。
-2. 在 `mkdocs.yml` 中取消 `repo_url` 注释并填写真实地址。
+2. `mkdocs.yml` 已配置仓库地址和公开站点 URL。
 3. 添加远程仓库并推送：
 
 ```bash
@@ -35,8 +35,8 @@ git remote add origin https://github.com/<username>/<repository>.git
 git push -u origin main
 ```
 
-4. `.github/workflows/deploy-wiki.yml` 会验证并把网站部署到 `gh-pages` 分支。
-5. 在 GitHub 仓库的 **Settings → Pages** 中选择从 `gh-pages` 分支发布。
+4. `.github/workflows/deploy-wiki.yml` 会构建并通过 GitHub Pages Artifact 发布。
+5. 在 GitHub 仓库的 **Settings → Pages** 中将 Source 设为 **GitHub Actions**。
 
 默认地址通常为：
 
@@ -51,4 +51,3 @@ https://<username>.github.io/<repository>/
 - MkDocs 只负责展示与搜索；
 - 来源层保留在仓库或本地，用于审计，不进入公开导航；
 - 更新知识后运行 `make verify_wiki` 和 `make docs-build`。
-

@@ -1,6 +1,6 @@
 PYTHON := /Users/panningyi/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3
 
-.PHONY: import check build_wiki apply_updates verify_wiki index search docs-prepare docs-serve docs-build
+.PHONY: import check build_wiki apply_updates verify_wiki index search docs-prepare docs-serve docs-build mcp-install mcp-test mcp-demo
 
 import:
 	$(PYTHON) scripts/import_docx.py
@@ -31,3 +31,13 @@ docs-serve: docs-prepare
 
 docs-build: docs-prepare
 	mkdocs build --strict
+
+mcp-install:
+	$(PYTHON) -m venv .venv-mcp
+	.venv-mcp/bin/pip install -r requirements-mcp.txt
+
+mcp-test:
+	$(PYTHON) scripts/test_mcp_tools.py
+
+mcp-demo:
+	$(PYTHON) scripts/demo_mcp_story.py

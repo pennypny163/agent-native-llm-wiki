@@ -83,22 +83,40 @@ def source_refs(text: str) -> list[str]:
 
 def main() -> None:
     errors: list[str] = []
-    ignored_roots = {".cache", ".git", "public", "site"}
-    files = sorted(
-        path
-        for path in ROOT.rglob("*.md")
-        if path.relative_to(ROOT).parts[0] not in ignored_roots
-    )
+    files = []
+    for filename in ("README.md", "AGENTS.md", "CONTRIBUTING.md", "CONTENT-NOTICE.md"):
+        path = ROOT / filename
+        if path.exists():
+            files.append(path)
+    for directory in (
+        "concepts",
+        "evergreen",
+        "explanations",
+        "how-to",
+        "reference",
+        "maps",
+        "learning-paths",
+        "meta",
+        "evidence",
+    ):
+        files.extend((ROOT / directory).rglob("*.md"))
+    files.extend((ROOT / "sources" / "imported").glob("*/index.md"))
+    files = sorted(set(files))
     source_dirs = {
         path.name: path
         for path in (ROOT / "sources" / "imported").iterdir()
         if path.is_dir()
     }
-    source_text = {
-        source_id: "\n".join(
-            path.read_text(encoding="utf-8")
+    source_headings = {
+        source_id: [
+            heading
             for path in sorted(directory.glob("*.md"))
-        )
+            for heading in re.findall(
+                r"^#+\s+(.+?)\s*$",
+                path.read_text(encoding="utf-8"),
+                re.MULTILINE,
+            )
+        ]
         for source_id, directory in source_dirs.items()
     }
     for path in files:
@@ -115,11 +133,11 @@ def main() -> None:
                     )
                     continue
                 if separator and section:
-                    pattern = re.compile(
-                        rf"^#+\s+{re.escape(section)}(?:[\s.、]|$)",
-                        re.MULTILINE,
-                    )
-                    if not pattern.search(source_text[source_id]):
+                    if not any(
+                        heading == section
+                        or heading.startswith((section + " ", section + ".", section + "、"))
+                        for heading in source_headings[source_id]
+                    ):
                         errors.append(
                             f"{path.relative_to(ROOT)}: 来源章节不存在 {ref}"
                         )

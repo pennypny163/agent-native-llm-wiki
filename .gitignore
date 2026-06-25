@@ -8,3 +8,4 @@ sources/imported/*/assets/
 meta/update-report.md
 site/
 .venv-docs/
+.venv-mcp/

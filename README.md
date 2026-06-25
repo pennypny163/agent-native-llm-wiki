@@ -1,5 +1,8 @@
 # LLM / Agent 知识库
 
+[公开 Wiki](https://pennypny163.github.io/agent-native-llm-wiki/) ·
+[MCP 使用说明](meta/mcp.md)
+
 这是一个面向人和 Agent 的知识管理系统。两份 Word 文档是上游资料，`sources/imported/`
 保存可重建的来源层，其他目录保存经过整理、验证和链接的知识。
 
@@ -14,6 +17,7 @@
 - [内容模型：Diátaxis + Evergreen](meta/content-model.md)
 - [Evergreen 核心判断](evergreen/)
 - [发布 MkDocs Wiki](meta/publishing.md)
+- [MCP 知识服务](meta/mcp.md)
 
 ## 内容层级
 
@@ -46,6 +50,10 @@ make docs-prepare
 
 # 安装 requirements-docs.txt 后本地预览
 make docs-serve
+
+# 测试和演示 MCP 知识服务
+make mcp-test
+make mcp-demo
 ```
 
 ## 核心原则
@@ -58,3 +66,6 @@ make docs-serve
 
 Git 跟踪 Markdown、脚本和规则；原始 Word、来源图片和本地索引属于可重建二进制，不进入普通 Git
 历史。
+
+代码、自动化和 MCP 实现使用 [MIT License](LICENSE-CODE)；知识内容与上游材料的权利边界见
+[CONTENT-NOTICE](CONTENT-NOTICE.md)。
