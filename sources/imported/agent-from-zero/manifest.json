@@ -1,0 +1,87 @@
+{
+  "source_id": "agent-from-zero",
+  "original_file": "大模型AI Agent知识从0-1笔记-万字详解版本！ .docx",
+  "sha256": "ce6e675edbec7adf3e97c21584f065ee7bda9dacb70d33a0f279774e9fd0e833",
+  "paragraphs": 477,
+  "tables": 109,
+  "images": 24,
+  "sections": [
+    {
+      "file": "00-front-matter.md",
+      "title": "00-front-matter",
+      "blocks": 3,
+      "characters": 63,
+      "sha256": "57515cb6dbf5c24ccae3f042e4d26fd89fafc63347b7c154bf7e245c6e6f8bcc"
+    },
+    {
+      "file": "1-1-什么是agent-为什么说它是ai的下一个战场.md",
+      "title": "1. 什么是Agent？为什么说它是AI的下一个战场",
+      "blocks": 18,
+      "characters": 506,
+      "sha256": "1a32c8c68825f6320a88abeac18bdddbf3f3a4e53f32bf83ffabfaedee1c8376"
+    },
+    {
+      "file": "2-2-agent核心架构深度剖析.md",
+      "title": "2. Agent核心架构深度剖析",
+      "blocks": 27,
+      "characters": 909,
+      "sha256": "430883424b93143e30f6ac0d766133c685c195dcfa3a1f706086da256178e08e"
+    },
+    {
+      "file": "3-3-agent的四大组成部分详解.md",
+      "title": "3. Agent的四大组成部分详解",
+      "blocks": 119,
+      "characters": 7648,
+      "sha256": "1d3bc10711ad7519486ffd0fe5e6b7c8930ea8464752df7d095998b6a397b8a6"
+    },
+    {
+      "file": "4-4-agent的工作原理与理解方式.md",
+      "title": "4. Agent的工作原理与理解方式",
+      "blocks": 52,
+      "characters": 3171,
+      "sha256": "de830255a96099be1262405e2a8652cb465d4415a05c4450c8f834525edcf2f5"
+    },
+    {
+      "file": "5-5-构建agent的五大难点与解决方案.md",
+      "title": "5. 构建Agent的五大难点与解决方案",
+      "blocks": 64,
+      "characters": 8229,
+      "sha256": "3164a5589d67871409532d9fabace083987fdeed0968dae0457b8611f4f9e1f4"
+    },
+    {
+      "file": "6-6-多agent协同系统设计.md",
+      "title": "6. 多Agent协同系统设计",
+      "blocks": 42,
+      "characters": 7284,
+      "sha256": "710dba840030f59e01c7db89e32fa37de93e3194c365c3f95a56e812bd60f48d"
+    },
+    {
+      "file": "7-7-主流agent开发框架对比.md",
+      "title": "7. 主流Agent开发框架对比",
+      "blocks": 30,
+      "characters": 4426,
+      "sha256": "c924dd8a888b5515909faab129bc4fcdd1f3bc313f3f3ff83288c423cc5a9d50"
+    },
+    {
+      "file": "8-8-agent实战案例与代码实现.md",
+      "title": "8. Agent实战案例与代码实现",
+      "blocks": 18,
+      "characters": 9178,
+      "sha256": "6b12f454e54480e0a05f2daafc5d4130dea521aaf063194d72faafcd39fd4c1c"
+    },
+    {
+      "file": "9-9-agent性能优化与最佳实践.md",
+      "title": "9. Agent性能优化与最佳实践",
+      "blocks": 26,
+      "characters": 6712,
+      "sha256": "4cdf9f572cc8f652d26bd9fd2d39b7b5a46b9689fd83730e41f446124110e3aa"
+    },
+    {
+      "file": "10-10-未来展望-agent的发展趋势.md",
+      "title": "10. 未来展望：Agent的发展趋势",
+      "blocks": 162,
+      "characters": 23433,
+      "sha256": "ef1d6a50293c3870b911d86e44648c35e58d55d896875fd333b70ab3570fc65e"
+    }
+  ]
+}

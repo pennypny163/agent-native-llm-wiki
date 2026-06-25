@@ -1,0 +1,15 @@
+sources:
+  - id: agent-from-zero
+    title: 大模型 AI Agent 知识从 0-1 笔记
+    file: 大模型AI Agent知识从0-1笔记-万字详解版本！ .docx
+    kind: tutorial-compilation
+    authority: secondary
+    notes: 入门叙事完整，但外部来源和事实验证较少。
+
+  - id: juliet-llm
+    title: 居丽叶 LLM 体系知识搭建
+    file: 居丽叶LLM体系知识搭建.docx
+    kind: technical-compilation
+    authority: secondary
+    notes: 覆盖面广并含论文和项目链接；仍需逐条区分一手与二手来源。
+

@@ -1,0 +1,66 @@
+{
+  "source_id": "juliet-llm",
+  "original_file": "居丽叶LLM体系知识搭建.docx",
+  "sha256": "357a64a9f7b75f2f20d7c87e1f9131ce900310cb6d98cf9be81cfb80ccd38b6f",
+  "paragraphs": 5795,
+  "tables": 161,
+  "images": 596,
+  "sections": [
+    {
+      "file": "00-front-matter.md",
+      "title": "00-front-matter",
+      "blocks": 9,
+      "characters": 209,
+      "sha256": "8b3fc9d32e172dce027e46a48d260d744f59c9ae85b12da067cf7e1837737870"
+    },
+    {
+      "file": "1-1-nlp基础知识篇.md",
+      "title": "1 nlp基础知识篇",
+      "blocks": 472,
+      "characters": 31166,
+      "sha256": "9e4e8dc58c7901d271961639ada259679195e4480144f0f1630b20d91570ddd7"
+    },
+    {
+      "file": "2-2-模型后训练篇.md",
+      "title": "2 模型后训练篇",
+      "blocks": 1608,
+      "characters": 120032,
+      "sha256": "3dcfc1eec0b7fd36ac3c44eedad85f98ebed1b18d6657ef3dc99f90a2ac41c30"
+    },
+    {
+      "file": "3-3-rag篇.md",
+      "title": "3 RAG篇",
+      "blocks": 1105,
+      "characters": 72735,
+      "sha256": "cd8fba7b96107c613c42519197f7fd4a4789f05ce5ef281b70b410b616232f24"
+    },
+    {
+      "file": "4-4-agent篇.md",
+      "title": "4 Agent篇",
+      "blocks": 621,
+      "characters": 47643,
+      "sha256": "ac328aa3d08101de913d75a822d8835544d1209df9e51fc4c4911c39ba0c1b9f"
+    },
+    {
+      "file": "5-5-现有大模型篇.md",
+      "title": "5 现有大模型篇",
+      "blocks": 1123,
+      "characters": 69321,
+      "sha256": "cf6d7030511af9ba46ea7342d098ee4eb1a20d1f309d28100aa45d9225dd87e3"
+    },
+    {
+      "file": "6-6-模型推理篇.md",
+      "title": "6 模型推理篇",
+      "blocks": 649,
+      "characters": 48507,
+      "sha256": "170a3695c8dde0ac2566c3f86c76050c377fc83aa37a7d2a119e741abd9f6efc"
+    },
+    {
+      "file": "7-7-预训练篇.md",
+      "title": "7 预训练篇",
+      "blocks": 199,
+      "characters": 10850,
+      "sha256": "2f8239e835d9336e14a5b87ea1860ab77e4408be7592e80d993c1937516939a2"
+    }
+  ]
+}

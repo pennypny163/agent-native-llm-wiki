@@ -1,0 +1,52 @@
+terms:
+  - canonical: AI Agent
+    aliases: [Agent, 智能体, LLM Agent, 基于大模型的智能体]
+    page: concepts/ai-agent.md
+
+  - canonical: Agent Planning
+    aliases: [Planning, Agent 规划, 任务规划]
+    page: concepts/agent-planning.md
+
+  - canonical: Agent Memory
+    aliases: [Memory, Agent 记忆, 智能体记忆]
+    page: concepts/agent-memory.md
+
+  - canonical: Tool Use
+    aliases: [工具使用, Tool Calling, Function Calling]
+    page: concepts/tool-use.md
+
+  - canonical: Retrieval-Augmented Generation
+    aliases: [RAG, 检索增强生成]
+    page: concepts/rag.md
+
+  - canonical: Transformer
+    aliases: [Transformer 架构]
+    page: concepts/transformer.md
+
+  - canonical: Self-Attention
+    aliases: [自注意力]
+    page: concepts/self-attention.md
+
+  - canonical: Tokenization
+    aliases: [Tokenizer, 分词, 子词切分]
+    page: concepts/tokenization.md
+
+  - canonical: Supervised Fine-Tuning
+    aliases: [SFT, 有监督微调, 指令微调]
+    page: concepts/supervised-fine-tuning.md
+
+  - canonical: Parameter-Efficient Fine-Tuning
+    aliases: [PEFT, LoRA, QLoRA, 参数高效微调]
+    page: concepts/parameter-efficient-finetuning.md
+
+  - canonical: LLM Inference
+    aliases: [大模型推理, LLM Serving]
+    page: concepts/llm-inference.md
+
+  - canonical: KV Cache
+    aliases: [Key-Value Cache, 键值缓存]
+    page: concepts/kv-cache.md
+
+  - canonical: Continuous Batching
+    aliases: [持续批处理, Iteration Batching]
+    page: concepts/continuous-batching.md

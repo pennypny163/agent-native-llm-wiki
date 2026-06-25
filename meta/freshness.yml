@@ -1,0 +1,13 @@
+policies:
+  low:
+    review_interval_days: 365
+    examples: [基础数学, 稳定的核心概念]
+
+  medium:
+    review_interval_days: 120
+    examples: [工程模式, 架构方法, 评估实践]
+
+  high:
+    review_interval_days: 30
+    examples: [模型能力, API, 框架版本, 价格, 榜单]
+
