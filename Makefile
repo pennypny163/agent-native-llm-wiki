@@ -1,6 +1,6 @@
 PYTHON := /Users/panningyi/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3
 
-.PHONY: import check build_wiki apply_updates verify_wiki index search
+.PHONY: import check build_wiki apply_updates verify_wiki index search docs-prepare docs-serve docs-build
 
 import:
 	$(PYTHON) scripts/import_docx.py
@@ -22,3 +22,12 @@ index:
 
 search:
 	$(PYTHON) scripts/search_kb.py "$(Q)"
+
+docs-prepare:
+	$(PYTHON) scripts/prepare_mkdocs.py
+
+docs-serve: docs-prepare
+	mkdocs serve
+
+docs-build: docs-prepare
+	mkdocs build --strict

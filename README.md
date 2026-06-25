@@ -13,6 +13,7 @@
 - [知识库维护方法](meta/maintenance.md)
 - [内容模型：Diátaxis + Evergreen](meta/content-model.md)
 - [Evergreen 核心判断](evergreen/)
+- [发布 MkDocs Wiki](meta/publishing.md)
 
 ## 内容层级
 
@@ -39,6 +40,12 @@ make verify_wiki
 
 # 分层搜索
 make search Q="KV Cache"
+
+# 生成公开 Wiki 发布视图
+make docs-prepare
+
+# 安装 requirements-docs.txt 后本地预览
+make docs-serve
 ```
 
 ## 核心原则

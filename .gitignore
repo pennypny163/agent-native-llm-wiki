@@ -6,3 +6,5 @@ __pycache__/
 *.doc
 sources/imported/*/assets/
 meta/update-report.md
+site/
+.venv-docs/

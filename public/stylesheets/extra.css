@@ -1,0 +1,26 @@
+:root {
+  --md-text-font: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --md-code-font: "SFMono-Regular", "Cascadia Code", monospace;
+}
+
+.md-grid {
+  max-width: 1440px;
+}
+
+.md-typeset h1 {
+  font-weight: 750;
+  letter-spacing: -0.025em;
+}
+
+.md-typeset h2 {
+  font-weight: 680;
+}
+
+.md-typeset blockquote {
+  border-left-color: var(--md-accent-fg-color);
+}
+
+.md-typeset .grid.cards > ul > li {
+  border-radius: 0.65rem;
+}
+

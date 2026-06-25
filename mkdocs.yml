@@ -1,0 +1,137 @@
+site_name: Agent-Native LLM Wiki
+site_description: 从 50 万字技术资料编译而来的可追溯 LLM、RAG 与 Agent 知识系统
+site_author: Panningyi
+docs_dir: .cache/public-docs
+site_dir: site
+use_directory_urls: true
+
+repo_name: agent-native-llm-wiki
+# 发布到 GitHub 后替换为真实仓库地址：
+# repo_url: https://github.com/<username>/<repository>
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: 切换至深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: 切换至浅色模式
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+
+markdown_extensions:
+  - meta
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - 首页: index.md
+  - LLM:
+      - 总览: maps/llm.md
+      - 基础:
+          - 主题地图: maps/llm-foundations.md
+          - Tokenization: concepts/tokenization.md
+          - Text Embeddings: concepts/text-embeddings.md
+          - Self-Attention: concepts/self-attention.md
+          - Transformer: concepts/transformer.md
+          - 位置编码: concepts/positional-encoding.md
+          - Normalization: concepts/normalization.md
+          - 解码策略: concepts/decoding-strategies.md
+          - 长上下文: explanations/long-context.md
+      - 训练与对齐:
+          - 主题地图: maps/llm-training.md
+          - 预训练: concepts/pretraining.md
+          - SFT: concepts/supervised-fine-tuning.md
+          - PEFT / LoRA / QLoRA: concepts/parameter-efficient-finetuning.md
+          - 偏好优化: concepts/preference-optimization.md
+          - 分布式训练: concepts/distributed-training.md
+          - 模型压缩: concepts/model-compression.md
+          - 模型量化: concepts/model-quantization.md
+          - 知识蒸馏: concepts/knowledge-distillation.md
+          - 训练项目规划: how-to/plan-llm-training.md
+          - LLM 评估: how-to/evaluate-llm.md
+      - 推理与部署:
+          - 主题地图: maps/llm-inference.md
+          - LLM Inference: concepts/llm-inference.md
+          - Prefill 与 Decode: concepts/prefill-decode.md
+          - KV Cache: concepts/kv-cache.md
+          - Continuous Batching: concepts/continuous-batching.md
+          - PagedAttention: concepts/paged-attention.md
+          - 投机解码: concepts/speculative-decoding.md
+          - 推理指标: reference/inference-metrics.md
+          - 服务优化: how-to/optimize-llm-serving.md
+      - 学习路径: learning-paths/llm-engineer.md
+  - RAG:
+      - 主题地图: maps/rag.md
+      - RAG: concepts/rag.md
+      - 文档切分: concepts/chunking.md
+      - 查询转换与路由: explanations/query-transformation-routing.md
+      - 混合检索: concepts/hybrid-retrieval.md
+      - 向量索引: concepts/vector-index.md
+      - 检索重排: concepts/reranking.md
+      - GraphRAG: explanations/graph-rag.md
+      - Agentic RAG: explanations/agentic-rag.md
+      - 构建指南: how-to/build-rag-system.md
+      - 评估指南: how-to/evaluate-rag.md
+      - 失败模式: reference/rag-failure-modes.md
+  - Agent:
+      - 主题地图: maps/agent.md
+      - AI Agent: concepts/ai-agent.md
+      - Planning: concepts/agent-planning.md
+      - Memory: concepts/agent-memory.md
+      - Tool Use: concepts/tool-use.md
+      - ReAct: explanations/react-loop.md
+      - 单 Agent 与多 Agent: explanations/single-vs-multi-agent.md
+      - 可靠性指南: how-to/design-reliable-agent.md
+      - 组件检查表: reference/agent-component-checklist.md
+      - 学习路径: learning-paths/agent-engineer.md
+  - Evergreen:
+      - 核心判断: evergreen/index.md
+      - Self-Attention 与长距离依赖: evergreen/why-self-attention-models-long-range-dependencies.md
+      - RAG 的失败发生在哪里: evergreen/rag-fails-before-generation.md
+      - Agent Planning 的权衡: evergreen/agent-planning-is-a-control-tradeoff.md
+      - Memory 不等于 Context: evergreen/memory-is-not-context.md
+  - 关于项目: about.md

@@ -31,11 +31,6 @@ related: [rag, agent]
 - [RAG 主题地图](rag.md)
 - [Agent 主题地图](agent.md)
 
-## 应用系统
-
-- [RAG 主题地图](rag.md)
-- [Agent 主题地图](agent.md)
-
 ## 暂不 canonical 化
 
 [现有大模型篇](../sources/imported/juliet-llm/5-5-现有大模型篇.md) 包含大量高时效模型信息。

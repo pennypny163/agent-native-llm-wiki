@@ -83,7 +83,12 @@ def source_refs(text: str) -> list[str]:
 
 def main() -> None:
     errors: list[str] = []
-    files = sorted(ROOT.rglob("*.md"))
+    ignored_roots = {".cache", ".git", "public", "site"}
+    files = sorted(
+        path
+        for path in ROOT.rglob("*.md")
+        if path.relative_to(ROOT).parts[0] not in ignored_roots
+    )
     source_dirs = {
         path.name: path
         for path in (ROOT / "sources" / "imported").iterdir()

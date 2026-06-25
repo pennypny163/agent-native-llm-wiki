@@ -1,0 +1,28 @@
+name: deploy-wiki
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install documentation dependencies
+        run: pip install -r requirements-docs.txt
+      - name: Prepare public Wiki
+        run: python scripts/prepare_mkdocs.py
+      - name: Verify Wiki
+        run: python scripts/verify_wiki.py
+      - name: Deploy to GitHub Pages
+        run: mkdocs gh-deploy --force
+

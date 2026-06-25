@@ -14,4 +14,10 @@ jobs:
           python-version: "3.12"
       - name: Verify knowledge base
         run: python scripts/verify_wiki.py
+      - name: Install documentation dependencies
+        run: pip install -r requirements-docs.txt
+      - name: Build public Wiki
+        run: |
+          python scripts/prepare_mkdocs.py
+          mkdocs build --strict
 
