@@ -41,6 +41,19 @@ REQUIRED = {
 LINK = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
 
 
+def registered_source_ids() -> set[str]:
+    path = ROOT / "evidence" / "sources.yml"
+    if not path.exists():
+        return set()
+    return set(
+        re.findall(
+            r"^\s+-\s+id:\s+([a-zA-Z0-9_.-]+)\s*$",
+            path.read_text(encoding="utf-8"),
+            re.MULTILINE,
+        )
+    )
+
+
 def frontmatter_block(text: str) -> str:
     if not text.startswith("---\n"):
         return ""
@@ -107,6 +120,7 @@ def main() -> None:
         for path in (ROOT / "sources" / "imported").iterdir()
         if path.is_dir()
     }
+    known_source_ids = set(source_dirs) | registered_source_ids()
     source_headings = {
         source_id: [
             heading
@@ -127,12 +141,12 @@ def main() -> None:
                 errors.append(f"{path.relative_to(ROOT)}: 缺少元数据 {sorted(missing)}")
             for ref in source_refs(text):
                 source_id, separator, section = ref.partition("#")
-                if source_id not in source_dirs:
+                if source_id not in known_source_ids:
                     errors.append(
                         f"{path.relative_to(ROOT)}: 未知来源 {source_id}"
                     )
                     continue
-                if separator and section:
+                if separator and section and source_id in source_dirs:
                     if not any(
                         heading == section
                         or heading.startswith((section + " ", section + ".", section + "、"))

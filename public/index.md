@@ -1,6 +1,6 @@
-# Agent-Native LLM Wiki
+# Agent-Native AI Wiki
 
-> 把 50 万字高质量大模型资料，从静态 Word 教材编译成可追溯、可验证、可持续演化的知识系统。
+> 把大体量 AI 技术与产品资料，从静态 Word 文档编译成可追溯、可验证、可持续演化、可被 Agent 调用的知识系统。
 
 [GitHub 仓库](https://github.com/pennypny163/agent-native-llm-wiki)
 
@@ -32,6 +32,14 @@
 
     [进入 Agent 主题地图](maps/agent.md)
 
+-   :material-account-tie: **AI PM**
+
+    ---
+
+    从技术边界、产品形态、指标评估到秋招面试表达。
+
+    [进入 AI PM 主题地图](maps/ai-product-management.md)
+
 -   :material-sprout: **Evergreen**
 
     ---
@@ -54,4 +62,5 @@
 
 - [LLM 工程师学习路径](learning-paths/llm-engineer.md)
 - [Agent 工程师学习路径](learning-paths/agent-engineer.md)
+- [AI PM 秋招面试准备路线](learning-paths/ai-pm-interview-prep.md)
 - [关于这个项目](about.md)

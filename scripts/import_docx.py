@@ -23,14 +23,26 @@ OUT_ROOT = ROOT / "sources" / "imported"
 DOCS = {
     "agent-from-zero": ROOT / "大模型AI Agent知识从0-1笔记-万字详解版本！ .docx",
     "juliet-llm": ROOT / "居丽叶LLM体系知识搭建.docx",
+    "ai-pm-guide": ROOT / "「Plus版本」万字逐步指南：文科生如何进入AI产品赛道？（持续更新中）.docx",
+    "rag-deep-dive": ROOT / "AI应用开发：RAG技术从小白到深入理解-详细版.docx",
+    "interview-playbook-27": ROOT / "v0.0_27届互联网上岸面试文档（神奇柚子）.docx",
 }
 
 DECIMAL_HEADING = re.compile(
     r"^(?P<num>\d+(?:\.\d+)+)[\s、.]+(?P<title>\S.*)$"
 )
 DOT_TOP_HEADING = re.compile(r"^(?P<num>\d+)\.\s+(?P<title>\S.*)$")
+NUMBERED_TOP_HEADING = re.compile(r"^(?P<num>\d+)[、.]\s*(?P<title>\S.*)$")
 CHAPTER_TOP_HEADING = re.compile(r"^(?P<num>\d+)\s+\S.*篇$")
 CHINESE_HEADING = re.compile(r"^第?[一二三四五六七八九十百]+[章节篇、.]\s*\S+")
+CHINESE_STAGE_HEADING = re.compile(
+    r"^第(?P<num>[一二三四五六七八九十百]+)阶段[:：]\s*\S+"
+)
+STEP_HEADING = re.compile(r"^▶️?\s*(?:📍)?(?:「[^」]+」)?步骤\d+[:：]\s*\S+")
+PART_HEADING = re.compile(r"^Part\s*(?P<num>\d+)\s*[:：]\s*\S+", re.IGNORECASE)
+CHINESE_TOP_HEADING = re.compile(r"^[一二三四五六七八九十百]+、\s*\S+")
+OPTIMIZATION_CHAPTER = re.compile(r"^\S+优化篇[:：]\s*\S+")
+INTERVIEW_COLLECTION_HEADING = re.compile(r"^\S+的业务思考问题&拆解合集$")
 
 
 @dataclass
@@ -57,6 +69,26 @@ def heading_info(text: str, source_id: str) -> tuple[int, str | None] | None:
     if match:
         number = match.group("num")
         return min(number.count(".") + 1, 5), number
+    if source_id == "ai-pm-guide":
+        match = CHINESE_STAGE_HEADING.match(text)
+        if match:
+            return 1, f"stage-{match.group('num')}"
+        if STEP_HEADING.match(text):
+            return 2, None
+        if text.startswith(("「‼️ 新增」", "▍", "第二部分：", "模型测评思路")):
+            return 3, None
+    if source_id == "rag-deep-dive":
+        match = NUMBERED_TOP_HEADING.match(text)
+        if match:
+            return 1, match.group("num")
+        if CHINESE_TOP_HEADING.match(text) or OPTIMIZATION_CHAPTER.match(text):
+            return 1, None
+    if source_id == "interview-playbook-27":
+        match = PART_HEADING.match(text)
+        if match:
+            return 1, match.group("num")
+        if INTERVIEW_COLLECTION_HEADING.match(text):
+            return 2, None
     if source_id == "agent-from-zero":
         match = DOT_TOP_HEADING.match(text)
         if match:

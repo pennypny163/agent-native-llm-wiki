@@ -1,10 +1,10 @@
-# LLM / Agent 知识库
+# Agent-Native AI Wiki
 
 [公开 Wiki](https://pennypny163.github.io/agent-native-llm-wiki/) ·
 [MCP 使用说明](meta/mcp.md)
 
-这是一个面向人和 Agent 的知识管理系统。两份 Word 文档是上游资料，`sources/imported/`
-保存可重建的来源层，其他目录保存经过整理、验证和链接的知识。
+这是一个面向人和 Agent 的 AI 知识管理系统。Word 文档是上游资料，`sources/imported/`
+保存本地可重建的来源层，其他目录保存经过整理、验证和链接的知识。
 
 ## 从这里开始
 
@@ -13,6 +13,8 @@
 - [RAG 主题地图](maps/rag.md)
 - [Agent 主题地图](maps/agent.md)
 - [Agent 工程师学习路径](learning-paths/agent-engineer.md)
+- [AI 产品管理主题地图](maps/ai-product-management.md)
+- [AI PM 秋招面试准备路线](learning-paths/ai-pm-interview-prep.md)
 - [知识库维护方法](meta/maintenance.md)
 - [内容模型：Diátaxis + Evergreen](meta/content-model.md)
 - [Evergreen 核心判断](evergreen/)
@@ -64,8 +66,7 @@ make mcp-demo
 4. 教程、操作指南、解释和参考资料分开组织。
 5. 模型、框架、价格、API 等易变信息必须标注验证日期。
 
-Git 跟踪 Markdown、脚本和规则；原始 Word、来源图片和本地索引属于可重建二进制，不进入普通 Git
-历史。
+Git 跟踪公开 Markdown、脚本和规则；原始 Word、私有来源全文、来源图片和本地索引属于可重建材料，不进入普通 Git 历史。
 
 代码、自动化和 MCP 实现使用 [MIT License](LICENSE-CODE)；知识内容与上游材料的权利边界见
 [CONTENT-NOTICE](CONTENT-NOTICE.md)。

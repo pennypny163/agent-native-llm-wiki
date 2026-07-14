@@ -6,6 +6,7 @@ domain: rag
 status: canonical
 sources:
   - juliet-llm#3
+  - rag-deep-dive#一、概览
 last_verified: 2026-06-25
 freshness: medium
 confidence: high
@@ -34,6 +35,7 @@ related: [agent]
 - [构建可追溯的 RAG 系统](../how-to/build-rag-system.md)
 - [评估 RAG 系统](../how-to/evaluate-rag.md)
 - [RAG 失败模式](../reference/rag-failure-modes.md)
+- [RAG 优化模式](../reference/rag-optimization-patterns.md)
 
 ## Evergreen 判断
 

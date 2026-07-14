@@ -78,6 +78,9 @@ def knowledge_files() -> list[Path]:
 def internal_links(path: Path, text: str) -> list[Path]:
     links: list[Path] = []
     for target in LINK_RE.findall(text):
+        target = target.strip()
+        if "\n" in target or "\r" in target or len(target) > 240:
+            continue
         if target.startswith(("http://", "https://", "#", "mailto:")):
             continue
         target = target.split("#", 1)[0]
@@ -99,4 +102,3 @@ def write_json(path: Path, data) -> None:
     path.write_text(
         json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
-

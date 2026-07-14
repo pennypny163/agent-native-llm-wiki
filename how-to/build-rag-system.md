@@ -9,6 +9,9 @@ sources:
   - juliet-llm#3.1.5
   - juliet-llm#3.1.6
   - juliet-llm#3.1.7
+  - rag-deep-dive#1、RAG的整体架构设计
+  - rag-deep-dive#三、路由优化和问题构建策略
+  - rag-deep-dive#六、Retrieval检索和Generation生成优化策略
 last_verified: 2026-06-25
 freshness: medium
 confidence: high
@@ -34,9 +37,13 @@ related: [evaluate-rag, rag-failure-modes]
 
 至少保留精确词法检索，并根据需要加入向量检索、元数据过滤和数据源路由。
 
+不要把复杂查询都压进同一种召回方式。多知识库、多数据结构或多权限场景，应先设计路由；自然语言需要进入数据库时，应把查询构建和安全校验作为独立步骤。
+
 ## 5. 重排和组织上下文
 
 对候选精排、去重，控制同一来源占比，并按问题结构组织证据，而不是简单按分数拼接。
+
+常见优化包括父文档返回、混合检索、重排和多向量表示。优化项应先在离线评估集上验证，再进入线上灰度。
 
 ## 6. 生成带依据的回答
 
@@ -50,3 +57,4 @@ related: [evaluate-rag, rag-failure-modes]
 
 分别测量解析、召回、排序、引用和最终答案。每次发现失败都应定位到链路中的具体阶段。
 
+进一步参考：[RAG 优化模式](../reference/rag-optimization-patterns.md)。

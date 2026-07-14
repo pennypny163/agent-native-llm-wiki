@@ -1,6 +1,7 @@
 PYTHON := /Users/panningyi/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3
+MKDOCS := $(shell if [ -x .venv-docs/bin/mkdocs ]; then echo .venv-docs/bin/mkdocs; else echo mkdocs; fi)
 
-.PHONY: import check build_wiki apply_updates verify_wiki index search docs-prepare docs-serve docs-build mcp-install mcp-test mcp-demo
+.PHONY: import check build_wiki apply_updates verify_wiki index search docs-install docs-prepare docs-serve docs-build mcp-install mcp-test mcp-demo
 
 import:
 	$(PYTHON) scripts/import_docx.py
@@ -26,11 +27,15 @@ search:
 docs-prepare:
 	$(PYTHON) scripts/prepare_mkdocs.py
 
+docs-install:
+	$(PYTHON) -m venv .venv-docs
+	.venv-docs/bin/pip install -r requirements-docs.txt
+
 docs-serve: docs-prepare
-	mkdocs serve
+	$(MKDOCS) serve
 
 docs-build: docs-prepare
-	mkdocs build --strict
+	$(MKDOCS) build --strict
 
 mcp-install:
 	$(PYTHON) -m venv .venv-mcp

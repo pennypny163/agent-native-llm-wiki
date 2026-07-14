@@ -13,3 +13,23 @@ sources:
     authority: secondary
     notes: 覆盖面广并含论文和项目链接；仍需逐条区分一手与二手来源。
 
+  - id: ai-pm-guide
+    title: Plus 版本万字逐步指南：文科生如何进入 AI 产品赛道
+    file: 「Plus版本」万字逐步指南：文科生如何进入AI产品赛道？（持续更新中）.docx
+    kind: career-guide
+    authority: secondary
+    notes: 私有来源；适合抽象为 AI PM 能力模型、学习路径、项目与面试方法，不公开原文。
+
+  - id: rag-deep-dive
+    title: AI 应用开发：RAG 技术从小白到深入理解
+    file: AI应用开发：RAG技术从小白到深入理解-详细版.docx
+    kind: technical-tutorial
+    authority: secondary
+    notes: 私有来源；适合补充 RAG 查询优化、索引优化、检索/生成优化和工程评估视角。
+
+  - id: interview-playbook-27
+    title: v0.0 27 届互联网上岸面试文档（神奇柚子）
+    file: v0.0_27届互联网上岸面试文档（神奇柚子）.docx
+    kind: interview-playbook
+    authority: secondary
+    notes: 私有来源且含版权/使用限制说明；只用于本地复盘和方法抽象，不公开原文内容。

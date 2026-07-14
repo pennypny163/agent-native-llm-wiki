@@ -5,6 +5,9 @@ __pycache__/
 *.docx
 *.doc
 sources/imported/*/assets/
+sources/imported/ai-pm-guide/
+sources/imported/rag-deep-dive/
+sources/imported/interview-playbook-27/
 meta/update-report.md
 site/
 .venv-docs/

@@ -1,5 +1,5 @@
-site_name: Agent-Native LLM Wiki
-site_description: 从 50 万字技术资料编译而来的可追溯 LLM、RAG 与 Agent 知识系统
+site_name: Agent-Native AI Wiki
+site_description: 从大体量 AI 技术与产品资料编译而来的可追溯 LLM、RAG、Agent 与 AI PM 知识系统
 site_author: Panningyi
 site_url: https://pennypny163.github.io/agent-native-llm-wiki/
 docs_dir: .cache/public-docs
@@ -117,6 +117,7 @@ nav:
       - 构建指南: how-to/build-rag-system.md
       - 评估指南: how-to/evaluate-rag.md
       - 失败模式: reference/rag-failure-modes.md
+      - 优化模式: reference/rag-optimization-patterns.md
   - Agent:
       - 主题地图: maps/agent.md
       - AI Agent: concepts/ai-agent.md
@@ -128,10 +129,20 @@ nav:
       - 可靠性指南: how-to/design-reliable-agent.md
       - 组件检查表: reference/agent-component-checklist.md
       - 学习路径: learning-paths/agent-engineer.md
+  - AI PM:
+      - 主题地图: maps/ai-product-management.md
+      - AI 产品经理: concepts/ai-product-manager.md
+      - 面试准备路线: learning-paths/ai-pm-interview-prep.md
+      - 产品形态: reference/ai-product-patterns.md
+      - 指标体系: reference/ai-product-metrics.md
+      - 面试问题库: reference/ai-pm-interview-question-bank.md
+      - AI PRD: how-to/design-an-ai-product-prd.md
+      - 评估 AI 功能: how-to/evaluate-ai-feature.md
   - Evergreen:
       - 核心判断: evergreen/index.md
       - Self-Attention 与长距离依赖: evergreen/why-self-attention-models-long-range-dependencies.md
       - RAG 的失败发生在哪里: evergreen/rag-fails-before-generation.md
       - Agent Planning 的权衡: evergreen/agent-planning-is-a-control-tradeoff.md
       - Memory 不等于 Context: evergreen/memory-is-not-context.md
+      - AI PM 的核心价值: evergreen/ai-pm-own-the-gap-between-model-capability-and-user-value.md
   - 关于项目: about.md

@@ -7,7 +7,7 @@
 | `title` | 人类可读标题 |
 | `aliases` | 中英文别名和常见写法 |
 | `type` | concept / evergreen / explanation / how-to / reference / learning-path / tutorial / map |
-| `domain` | llm / rag / agent / knowledge-management |
+| `domain` | llm / rag / agent / ai-pm / knowledge-management |
 | `status` | draft / canonical / deprecated |
 | `sources` | `source-id#section` 列表 |
 | `last_verified` | 最近验证日期，格式 YYYY-MM-DD |

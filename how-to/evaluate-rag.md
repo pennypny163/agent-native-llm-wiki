@@ -7,6 +7,7 @@ status: canonical
 sources:
   - juliet-llm#3.1.6
   - juliet-llm#3.1.9
+  - rag-deep-dive#3. 评估RAG：如何知道你的系统靠不靠谱？
 last_verified: 2026-06-25
 freshness: medium
 confidence: high
@@ -44,6 +45,8 @@ related: [rag-failure-modes, build-rag-system]
 - 是否遵守“证据不足则说明不知道”；
 - 多轮问题重写后是否保留原意。
 
+常用维度可以拆成忠实度、答案相关性、上下文相关性和上下文召回。它们分别检查“有没有编”“有没有答到点上”“给模型的材料是否相关”和“需要的证据是否被找回”。
+
 ## 系统评估
 
 - TTFT、总延迟、P95/P99；
@@ -53,4 +56,3 @@ related: [rag-failure-modes, build-rag-system]
 - 用户完成任务的成功率。
 
 评估结果应按查询类型分层。平均分可能掩盖多跳问题、表格问题或长尾实体上的严重失败。
-
