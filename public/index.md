@@ -5,14 +5,9 @@ title: 知源编译系统
 <section class="story-hero" markdown>
 <div class="story-hero-copy" markdown>
 
-<span class="story-label">面向人和 Agent 的 LLM/RAG/Agent 知识管理系统</span>
+<span class="story-label">知源编译系统 · 面向人和 Agent 的 LLM/RAG/Agent 知识管理系统</span>
 
-<div class="story-subtitle">
-  <strong>知源编译系统</strong>
-  <span>面向人和 Agent 的 AI 知识基础设施。</span>
-</div>
-
-# 收藏≠学习：信息焦虑后，我开始构建自己的AI知识体系
+# 收藏≠学习：信息焦虑后，<br>我开始构建自己的 AI 知识体系
 
 刚开始考虑转行AI产品经理，我的收集癖就犯了：先购入一大堆“一站式AI产品经理学习指南”等教程。公众号收藏的文章、小红书上买来的面经、学长学姐整理的飞书文档、技术社区的分享长文和Leetcode题库，很快塞满了各平台文件夹。前后花了¥1000+，换得短暂的安慰——资料已经在手里，只待有时间去学。
 
@@ -28,13 +23,6 @@ title: 知源编译系统
 
 </div>
 
-<aside class="story-note" markdown>
-<span>我最后把问题写成了这句话</span>
-
-怎样让一批散落、冲突、还会过期的资料，稳定地变成我能复用、Agent 也能核验的判断？
-
-这比“选哪个笔记软件”难得多，也更值得长期做。
-</aside>
 </section>
 
 <section class="story-metrics" markdown>
